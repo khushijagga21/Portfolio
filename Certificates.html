@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Certificates - My Portfolio</title>
+        <style>
+    /* Add this CSS to your styles.css file */
+.certificates-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.certificate {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 1px solid #d9d9d9;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.certificate:hover {
+    transform: scale(1.05);
+}
+
+.certificate-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.certificate-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.certificate-details {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.certificate h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.certificate p {
+    font-size: 16px;
+    margin: 0;
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+#lightbox-img {
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ </style>
+    </head>
+    <body>
+        <div class="certificates-section">
+            <h1>Certificates</h1>
+
+            <div class="certificate">
+                <div class="certificate-image">
+                    <img src="/Quick IQ chalange.jpg"
+                        onclick="openLightbox(this)">
+                </div>
+                <div class="certificate-details">
+                    <h2>Smart India Hackathon</h2>
+                    <p> I participted in Smart India Hackathon in my College
+                    </p>
+                </div>
+            </div>
+
+            <div class="certificate">
+                <div class="certificate-image">
+                    <img src="/SIH.jpg"
+                        onclick="openLightbox(this)">
+                </div>
+                <div class="certificate-details">
+                    <h2>Quick IQ Challange</h2>
+                    <p>Participted in Quick IQ challange Organised by KIET group
+                        of Institutions</p>
+                </div>
+            </div>
+
+            <div class="certificate">
+                <div class="certificate-image">
+                    <img src="/Chegg training certificate.png"
+                        onclick="openLightbox(this)">
+                </div>
+                <div class="certificate-details">
+                    <h2>Chegg training Certificate</h2>
+                    <p> Complete training of Chegg in Freelancing
+                    </p>
+                </div>
+            </div>
+
+            <div class="certificate">
+                <div class="certificate-image">
+                    <img src="/Poster presentation.jpg"
+                        onclick="openLightbox(this)">
+                </div>
+                <div class="certificate-details">
+                    <h2>Poster presentation</h2>
+                    <p> Participted in poster presentation competition Organised
+                        by EPC and IIIC club in College
+                    </p>
+                </div>
+            </div>
+
+            <!-- Add more certificate entries as needed -->
+        </div>
+
+        <div class="certificate">
+            <div class="certificate-image">
+                <img src="/JJ Crackathon.jpg"
+                    onclick="openLightbox(this)">
+            </div>
+            <div class="certificate-details">
+                <h2>JJ Crakathon</h2>
+                <p> Participated in JJ Crackathon oragnized by Johnson and
+                    Johnson.A problem statement on High Speed automated blister
+                    machine was given which I present a solution on it
+                </p>
+            </div>
+        </div>
+
+        <div id="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" src alt="Certificate Image">
+        </div>
+
+        <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox-img").src = img.src;
+            document.getElementById("lightbox").style.display = "block";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+    </body>
+</html>
